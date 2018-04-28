@@ -1,0 +1,14 @@
+body {
+
+}
+
+.jumbotron {
+    background-image: url("../images/yellowtrain.jpeg");
+    background-size: cover;
+    padding: 7em;
+}
+
+.jumbotron h1, .jumbotron p {
+    background: rgba(255, 255, 255, 0.4);
+    color: black;
+}

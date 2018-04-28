@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <title>Train Scheduler</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="jumbotron text-center col-12">
+                <h1 class="display-4">The #1 site for made-up train schedules</h1>
+                <hr class="my-4">
+                <p>
+                    <em>"This website simplified my life"</em> - No One</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card border-warning col-12">
+                <div class="card-header font-weight-bold">
+                    Current Train Schedule
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody id="train-data">
+                            <!-- Firebase Data will display here-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="card border-warning col-12">
+                <div class="card-header font-weight-bold">
+                    Add a train
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="train-name">Train Name</label>
+                            <input type="text" class="form-control" id="train-name">
+                        </div>
+                    </form>
+                    <form>
+                        <div class="form-group">
+                            <label for="train-destination">Destination</label>
+                            <input type="text" class="form-control" id="train-destination">
+                        </div>
+                    </form>
+                    <form>
+                        <div class="form-group">
+                            <label for="train-time">Time of First Train (hh:mm - military time)</label>
+                            <input type="text" class="form-control" id="train-time">
+                        </div>
+                    </form>
+                    <form>
+                        <div class="form-group">
+                            <label for="train-frequency">Frequency (min)</label>
+                            <input type="text" class="form-control" id="train-frequency">
+                        </div>
+                    </form>
+                    <a href="#" class="btn btn-warning" id="data-submit">Submit</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
